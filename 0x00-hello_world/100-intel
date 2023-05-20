@@ -1,16 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
+#!/bin/bash
 
-int main() {
-    char* cFileName = "-S $CFILE";
-    char* asmFileName = "output.asm";
+CFILE="$CFILE"
+ASMFILE="output.asm"
 
-    // Generate assembly code using gcc with the "-S" option
-    char command[100];
-    sprintf(command, "gcc -S -masm=intel %s -o %s", cFileName, asmFileName);
-    system(command);
-
-    printf("Assembly code generated and saved in %s\n", asmFileName);
-
-    return 0;
-}
+# Generate assembly code using gcc with the "-S" option
+gcc -S -masm=intel "$CFILE" -o "$ASMFILE"
