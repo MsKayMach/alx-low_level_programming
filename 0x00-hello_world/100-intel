@@ -1,7 +1,2 @@
 #!/bin/bash
-
-CFILE="$CFILE"
-ASMFILE="output.asm"
-
-# Generate assembly code using gcc with the "-S" option
 gcc -S -masm=intel "$CFILE" -o "$ASMFILE"
