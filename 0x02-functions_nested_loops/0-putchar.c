@@ -2,11 +2,8 @@
 /**
  * main - Entry point
  * Description: 'program that prints _putchar, followed by a new line'
- * @c: The character to print
  *Return: Always 0 (Success)
  */
-int _putchar(char c);
-
 int main(void)
 {
 _putchar('_');
